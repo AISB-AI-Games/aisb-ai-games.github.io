@@ -1,0 +1,24 @@
+// Adaptive screen sizes
+$screen-xl-min: 1200px;
+
+$screen-lg-max: $screen-xl-min - 1;
+$screen-lg-min: 992px;
+
+$screen-md-max: $screen-lg-min - 1;
+$screen-md-min: 768px;
+
+$screen-sm-max: $screen-md-min - 1;
+$screen-sm-min: 576px;
+
+$screen-xs-max: $screen-sm-min - 1;
+
+// Font sizes
+$fontsize-html: 16px;
+$fontsize-body: 22px;
+$lineheight-body: 33px;
+
+// Colors
+$blue: #00b;
+$purple: #50c;
+$purple-dark: darken($purple, 16%);
+$orange: #f50;
