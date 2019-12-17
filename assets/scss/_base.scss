@@ -1,6 +1,6 @@
 html {
   font-size: $fontsize-html;
-  
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,7 +23,7 @@ body {
   background-color: #fff;
   color: #222;
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  
+
   font-size: 1em * ($fontsize-body/$fontsize-html);
   line-height: 1em * ($lineheight-body/$fontsize-body);
   font-weight: normal;
@@ -33,6 +33,18 @@ a {
   color: $purple;
   text-decoration: none;
   border-bottom: solid 2px;
+
+  &.a-ext:after {
+    content: '↗';
+    margin-left: .136363636363636em;
+    position: relative;
+    top: .2272727273em;
+  }
+
+  &.a-ext:hover:after {
+    top: 0;
+    left: .2272727273em;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,7 +59,7 @@ small {
 
 p, ol, ul {
   margin-bottom: 1em;
-  
+
   &.nomargin {
     margin: 0
   }
@@ -57,7 +69,7 @@ p, ol, ul {
 
 ol, ul {
   padding-left: 1.5em;
-  
+
   ol, ul {
     padding-left: 1.5em;
     margin-bottom: 0;
@@ -74,7 +86,7 @@ $ul-marker-width: 1em;
 ul {
   list-style-type: none;
   text-indent: -1 * $ul-marker-width;
-  
+
   > li {
     &:before {
       content: '•';
@@ -104,6 +116,11 @@ ul.list-marker-sun > li {
 ul.list-marker-check > li {
   &:before       { content: '✓' }
   &:hover:before { content: '▢' }
+}
+
+ul.list-marker-down > li {
+  &:before       { content: '↓' }
+  &:hover:before { position: relative; top: .18181818em }
 }
 
 ul.list-marker-rarr > li {
@@ -139,10 +156,10 @@ ul.list-marker-rarr > li {
 .gradient {
   background: -webkit-linear-gradient(120deg, $purple, $orange);
   background: linear-gradient(120deg, $purple, $orange);
-  
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+
   background-clip: text;
   color: transparent;
 }
